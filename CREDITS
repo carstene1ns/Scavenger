@@ -1,0 +1,33 @@
+Scavenger and this CREDITS file was written by David Ashley.
+
+---  THANKS  ----------------------------------------------------------------
+I learned a lot from koules (an excellent game written by Jan Hubicka).
+I learned most of what I know about XWindows by looking at his code. Also
+the sound player is a modified version of the one in koules. Kevin Oster
+and Alex Morando designed a lot of the levels, but most of them are mine.
+Ron Hunsinger figured out the algorithms for enemy movement--they match
+the real Lode Runner exactly.
+
+--Dave Ashley
+Wed Apr 23 05:44:42  1997
+--------
+Marcus Brinkman <Marcus.Brinkmann@ruhr-uni-bochum.de> has adopted xscavenger
+and is taking care of the debian maintenance. He also cleaned up the code
+in a lot of places to prevent lint-warnings. Thanks for your efforts, Marcus!
+
+--Dave Ashley
+Wed Dec 17 17:58:22 PST 1997
+--------
+Eivind Eklund contributed patches to make scavenger work on FreeBSD and do some
+better error correction. Thanks, Eivind!
+--Dave Ashley
+Wed May  6 11:33:54 PDT 1998
+--------
+Thanks to Sam Lantinga for his SDL library. For what it's worth I can take
+the same codebase and get it working on win32 now using the SDL lib.
+Sun Aug 22 09:36:41 PDT 1999
+--------
+Thanks to Frank Zago and Barry Mead for thir contributions to the SDL version
+of scavenger.
+Thu Dec 2 15:21:03 MST 2004
+--------

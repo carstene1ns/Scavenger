@@ -1,0 +1,191 @@
+Scavenger and this DOC file were written by David Ashley. dash@xdr.com
+SDL version enhancements were contributed by Barry Mead barrymead@cox.net
+---  DETAILED INFO  ---------------------------------------------------------
+
+ ---  DEMO MODE: ---
+The game starts up in demo mode, where the game is playing on its own.
+Some keys do things:
+F1    Start game at first unsolved level
+F2    Enter animator
+F3    Enter level editor
+F4    Start game at level 1 (or level specified by -l option)
+F8    Skip to next demo level
+F10   Remap movement keys
+Alt-X Exit game
+Space Go to a menu listing the above things,
+
+alt-c at any time does a screen capture to cap###.lbm.
+
+
+
+ ---  MENU MODE: ---
+In the menu you get the option to change your player name with F5
+F5    Change player name.
+
+ ---  ANIMATOR MODE: ---
+The color table will switch all around, don't be surprised.
+The animator is a lot like Dpaint.
+
+b        Copy box. Click somewhere in the blowup and drag an area.
+shift-b  Go back to last brush.
+x        Flip brush in x, or flip square if no brush in hand.
+y        Flib brush in y, or flip square if no brush in hand.
+z        Rotate brush 90 degrees, or rotate square if no brush in hand.
+.        Go to having a single point brush of the current color.
+[ and ]  Select previous and next color
+,        Pick a color--click somewhere in the blowup to use the same color
+         as another one you see. Shorthand for this is clicking left or
+         right mouse button on the large color boxes under the icons on
+         the center right.
+Alt-1    Select the background artwork to work on
+Alt-2    Select the hero artwork to work on
+Alt-3    Select the enemy artwork to work on
+Alt-4    Select the hidden enemy artwork to work on
+u        UNDO
+f        Area fill mode
+d        Draw mode
+l        Line mode
+r        Rectangle mode
+ESC      Exit back to demo mode
+
+Shift-S  Save out file
+Shift-L  Load in last saved file
+-        Go to smaller built in brush
+=   (+)  Go to larger built in brush.
+
+Draw in the blowup box. Clicking the left mouse button draws with the
+primary color (indicated by the square in the color map). The right mouse
+button paints with the secondary color. Change the primary by clicking
+the left mouse button on the color array, and change the secondary by
+clicking the right mouse button on the color array.
+
+Select which box to work on with the left mouse button, just click on
+the box.
+
+Copy one box to another by using the right mouse button and a click-drag-
+unclick operation.
+
+Change the color table by moving the RGB sliders. It is sometimes useful to
+change the background color (normally the black in the upper left of the
+color array) to something besides black. You will be able to see other
+animation frames that are normally hidden, such as the dig animation.
+
+ ---  EDITOR MODE: ---
+This is for creating your own levels.
+l          load level (use alt-l to force a load)
+w          write level (use alt-w to force a write)
+space      Try the level
+esc        exit back to demo mode
+rightarrow Increase level # by 1
+leftarrow  Decrease level # by 1
+uparrow    Increase level # by 10
+dnarrow    Decrease level # by 10
+pageup     Increase level # by 100
+pagedown   Decrease level # by 100
+Keypad Nos.Direct entry of level number (Number keys at top of keyboard also work now)
+F1 - F12   Select matching tile type
+Keypad +-  Load previous/next level
+alt-f      Fill with current tile type
+
+Left mouse button draws with current tile type. Right mouse button erases.
+
+You can start writing new levels at 194 if you don't want to write over
+existing levels.
+
+The order of the tiles from left to right is:
+Empty
+brick      Your hero can dig these
+cement     These can't be dug
+Ladder
+Rail
+Fakebrick  You fall through this. The enemies think it's a normal brick.
+exitladder These appear after the last object has been collected.
+Object     The hero must collect these.
+Enemy      You can have 0 to 5 of these
+Hero       Only 1 of these
+Hidden     This is a place where a hidden monster might be if you dig there.
+Flashing   This object is more valuable if you collect it first.
+
+
+---  SCORING AND MOVIES  ----------------------------------------------------
+
+You've got infinite lives to complete each level, but after each failed
+attempt you start all over. Each level has its own best score. If you beat
+the level's previous best score, or if the level hasn't been solved before,
+a recording of your play will be stored in the $HOME/.scavenger/level.scl
+file. It's fun to watch the movies play back in demo mode. Remember F8 will
+let you skip levels in demo mode.
+
+Each object is worth 250 points.
+The flashing object is worth 8000 points, but you've got to get it first.
+If you exit the level without trapping any monsters (the hidden monster
+  doesn't count), you get a bonus of 20000 points.
+If you exit the level without killing any monsters (the hidden monster
+  doesn't count), you get a bonus of 10000 points. You don't get both
+  large bunuses together.
+The time bonus starts at 10000 points and counts down about 100 points
+  every second.
+The hidden monster carries an object that is worth 10000 points. Trap him
+  to get it. Trapping and killing the hidden monster doesn't harm your bonus--
+  the whole idea is to find him and kill him.
+
+
+---  LEVEL DESIGN  ----------------------------------------------------------
+
+The hidden monsters are an interesting addition. Try to locate them where it
+won't hurt the player. You don't want the player to accidentally find a
+hidden monster while trying to dig a pit for an enemy to fall into.
+
+The flashing object adds some more variety. Sometimes it's tricky to get
+to the flashing object.
+
+Enemies can pick up normal objects temporarily, but not the flashing object.
+
+Writing out a level deletes the matching movie, if there is one.
+
+
+---  The scavrc file  -  remapping keys  -  alternate gfx sets  -------------
+
+The $HOME/.scavenger/scavrc file contains the game's own key mappings.
+You can edit this file to change the mappings, but you've got to know
+the keycode. Each item is in hex. The codes are ascii for the common
+characters, and otherwise use the MY<thing> code values as defined in
+<scav.h>.
+
+The names:
+
+background
+hero
+enemy
+hidden
+
+Point to .lbm graphics format names. If you want to see other graphics
+sets, point these to other ones. If you want to create your own graphics
+sets, make a copy of an existing one and put it into your
+$HOME/.scavenger directory. You might want to rename it also, but keep the
+.lbm suffix for future uses. Then change the scavrc file to point to your
+new filename. Don't include any path, scavenger looks for the file first
+in $HOME/.scavenger then sequentially in the directories listed in
+LIBPATH (see names.h) then in $HOME/.scavenger.
+
+If you wish to automatically select an alternate configuration file
+(other than scavrc) simply run scavenger with the -c or --config option
+like so.
+sdlscav --config reddevilrc
+sdlscav -c reddevilrc
+sdlscav -c micromanrc
+
+In this example you would have a file named reddevilrc in your
+$HOME/.scavenger directory that looks like this:
+
+background=redbrick.lbm
+hero=reddevil.lbm
+enemy=badguy.lbm
+hidden=spiral.lbm
+upkey=111
+downkey=112
+leftkey=114
+rightkey=113
+digleftkey=132
+digrightkey=134
+

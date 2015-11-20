@@ -1,0 +1,122 @@
+                                STRATEGY
+
+The sdl-scavenger game is much like the popular Lode Runner game by Broderbund. 
+There are a few subtle differences however that greatly affect optimal game
+strategy.
+
+The score is based on five factors:
+ 
+(Time, Objects, Flashing Objects, Hidden Monster, Enemy Cruelty)
+
+Time:
+
+Time is an important, factor, but not the most important factor.
+When you start each game level you are given a 10,000 point time bonus.
+Each second of play time deducts 100 points from this bonus.
+Once this 10,000 point time bonus is used up, (100 seconds), you
+are no longer penalized for taking more time.  Some levels are so
+involved that they always take over 100 seconds to solve so (on these levels) 
+time is not a factor in determining your score.  If you match the best score
+in less time, however, your name will be put into the hall-of-fame and your
+game will become the new movie-demo for that level.
+
+Objects: (Blueberrys in the default game configuration)
+
+Collecting these objects gives you 250 points for each collected
+object.  While this isn't always the biggest factor in getting a high
+score, they all must be collected, before you can finish the level. 
+It is also important to remember that the enemies are able to pick-up and
+carry the objects for a short while, altering their location.
+The "Ladder" progress indicator in the lower left hand corner of your screen
+tells you when all of the objects have been collected. (When it is safe to
+proceed to the exit at the top of the screen)  Another twist that can affect
+your score, is that under certain circumstances the enemies can "Eat" the
+objects denying you to opportunity to collect the 250 points for capturing that
+particular object.  This happens when an enemy is carrying an object, then
+falls diagonally through a blasted hole.  So try to capture the objects
+located in these trap areas before the enemies can get to them.  This will
+help maximize your score.
+
+Flashing Object: (Flashing Blueberry in the default game configuration)
+
+The Flashing Object appears randomly in one of three locations specified
+by the level designer.  It's location changes each time you play the level.
+If you can manage to collect the Flashing Object before any of the other
+objects (except the Hidden Monster *) you get an 8000 point "Flashing" bonus.
+* The Hidden Monster can be collected before the flashing object without
+affecting the 8000 point Flashing Object bonus.  Enemies cannot pick-up the
+Flashing Object as long as it is flashing.  If you collect another object
+before the Flashing Object, it stops flashing (becomes a normal 250 point
+object).
+
+Hidden Monster: (Spiral thing in the default game configuration)
+
+The Hidden monster is randomly buried under one of three secret locations
+specified by the level designer.  It's location changes each time you play the
+level.  You must blast open the block containing the Hidden monster, to release
+him.  Then you must blast another hole and re-trap the Hidden Monster in it.
+Once the hidden monster is re-trapped he releases his treasure. (It looks
+like an orange Pill in the default configuration). Run over his head to
+collect the orange pill before it disappears, and you get a 10,000 point
+Hidden Monster bonus.  You must re-trap the hidden monster in a block that has
+no ladders or other blocks directly above it, or you will not get the bonus.
+
+Enemy Cruelty Penalties:
+
+The enemies are trying to kill you.  If they touch you, they kill you, and
+you must replay the level from the beginning.  You must use ladders and holes
+to escape them, collect all of the Objects, and exit the level at a ladder
+reaching the top of the screen.  If an enemy is trapped in a hole, falling,
+or walking/traversing overhand bars, then you can walk on his head without
+getting killed.  You cannot safely walk on the enemy's head while he is on
+ladders however.
+
+You start each level with a 20,000 point nice guy bonus.  If you drop an
+enemy into a hole that you dug (blasted), you lose 10,000 points
+(Trapping Penalty).  If you trap an enemy in a hole long enough for it to
+grow back around him, then he dies, and he re-appears at the top of the
+screen.  When an enemy is killed in this way you lose another 10,000 points
+(Killing Penalty).  You can only be penalized once-per-level for each of
+these penalties.  When an enemy dies/re-appears, he chooses a random location
+from any of the unoccupied blocks along the top row of the screen.  Some levels
+are designed with only a few unoccupied blocks in the top row to specifically
+control where the enemies may re-appear. (Level 17 for instance)
+
+So to get the best score you try to trick the enemys into falling into holes
+that you didn't dig, or fool them into going the wrong way by climbing up/down
+ladders, or escaping through holes that you dig.  If you become good at evading,
+rather than trapping/killing the enemys, you generally get a better score.  
+
+Some levels are designed so that it is impossible to solve the level without
+trapping or killing the enemys.  Some depend on the enemys re-appearing at the
+top of the screen to make the level solvable.  On these levels you have to
+blast.  But it is always a challenge to try solving the levels without
+trapping, or killing the enemys.  It is almost always easier to solve a level
+by trapping or killing the enemies, but you usually won't get the highest
+possible score if you solve the level that way. 
+
+All of the levels are solvable.  Some are very challenging.  If you don't
+believe a level is solvable then run the game with the -s  option to see
+how the masters solve the level.  Example:
+sdlscav -s -l 40  (Demonstrates how to solve level 40 - linux)
+sdlscav -s 40     (Windows users)
+
+When you get good at the game you may prefer to run the game with the -s option
+so you can compete with the masters, to see if you can beat their scores/times
+in the "Hall-of-Fame" demo movies.
+
+The demos in the masters.scl file (viewable by using the -s option), are often
+created by the game or level designers themselves.  So if you can beat their
+scores or times, you are doing very well indeed.
+
+                             (Strategy Summary)
+
+So to get the highest score:
+
+1. If there is a flashing object try to collect it first.
+2. Study the locations of the hidden monster using the F3 edit screen and try
+   get the hidden monster bonus (if there is one).
+3. Try to evade the enemies using ladders and escape routes rather than
+   trapping or killing them.
+4. Try to optimize the object collection order, and exit the level at the
+   ladder reaching the top of the screen in the minimum possible time.

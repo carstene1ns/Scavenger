@@ -1,0 +1,135 @@
+Scavenger and this changelog file were written by David Ashley.
+
+------------------------------------------------------------------------------
+Version is 1.4.5
+Improved the operation of the SDL version and added loads of new features.
+See the NEW_FEATURES file for a full list.
+------------------------------------------------------------------------------
+Version is still 1.3.7
+Sun Aug 22 09:50:41 PDT 1999
+Finished up SDL version of scavenger. Works under windoze now too.
+Fixed an old bug in the resource code which left open filehandles around.
+This was preventing deleting the levels.scl file under windoze. Ripped out
+the old sound server mechanism and used SDL threads for sound, taking my
+sound driver from my sdlbomber game.
+------------------------------------------------------------------------------
+Mon Jan  4 20:53:52 PST 1999
+Version is 1.3.7
+Dave Ashley: Hwei Sheng TEOH <hsteoh@cs.toronto.edu> sent me some new
+artwork and a modified scav.c file to show some animation during digging.
+Every bit helps :^). Thanks Hwei!
+------------------------------------------------------------------------------
+Sun Oct  4 10:45:52 PDT 1998
+Version is 1.3.6
+Dave Ashley:  Daniel de RAUGLAUDRE, daniel.de_rauglaudre@inria.fr,
+http://pauillac.inria.fr/~ddr/   found a bug in the movie generation that
+I'm surprised no one ever noticed. It turns out every time you finished a
+level you would be the previous best score, and your new movie would be
+saved. Now the movie should only be saved if you actually did get a better
+score. Daniel also added F7 for previous level, similiar to F8 going to
+next level. Thanks Daniel!
+------------------------------------------------------------------------------
+Sat Jun  6 11:43:26 PDT 1998
+Version is 1.3.5
+Dave Ashley: fixed problem in scavserver.c, if the /dev/dsp file cannot be
+opened, the scavserver task just lingers and never exits. I changed it so
+it will do everything normally, just not try to write to the filehandle
+associated with the sound device. Also the error message is more helpful:
+scavserver: Couldn't open DSP /dev/dsp, you must play without sound.
+------------------------------------------------------------------------------
+Wed May 27 14:00:07 PDT 1998
+Version is still 1.3.4
+Dave Ashley: Fixed minor quirk in edit.c, in the level editor the fill type
+was not drawn with a box around it correctly. Relavent routines are ebox0
+and ebox1.
+------------------------------------------------------------------------------
+Sun May 24 12:26:10 PDT 1998
+Version is 1.3.4
+Dave Ashley: Fixed bug discovered by Hwei Sheng TEOH <hsteoh@cs.toronto.edu>.
+The bug would surface when you'd replay a level, the movie wouldn't be
+recorded correctly. The problem was that during a recording (when you're
+actually playing), if a movie exists the first movement count would get
+corrupted. The movies are stored as a series of count,action pairs. Had to
+fix the initplay() routine in scav.c.
+------------------------------------------------------------------------------
+Wed May  6 11:33:54 PDT 1998
+Version is 1.3.3
+Dave Ashley: Made changes contributed by Eivind Eklund <eivind@yes.no>, sorry
+to be so late about it Eivind! Anyway:
+1) Supposedly works under FreeBSD.
+2) Supposed to check for disk full when writing out level resource file.
+3) If no sound card exists, scavserver exits gracefully (no core dump).
+Thanks, Eivind!
+------------------------------------------------------------------------------
+Wed Feb 25 14:43:22 PST 1998
+Version is 1.3.2
+Dave Ashley: Changed x.c and anim.c so the animator should work with 8 bit,
+16 bit, 24 bit and 32 bit modes ok. Originally it only worked right with
+8 bit mode.
+------------------------------------------------------------------------------
+Wed Dec 17 17:51:00  PST 1997
+Version is still 1.3.1
+Dave Ashley: Marcus wants me to adopt his version as the "official"
+xscavenger so I've checked all his changes out and am now putting it up on
+my web page. It looks like what he did was to run lint or equivalent on all
+the source files, and fix all the niggling compiler warnings...There are 100's
+of little changes made, but it doesn't look like he installed some evil
+virus :^).
+------------------------------------------------------------------------------
+Sat Dec  6 18:02:00  1997
+Version is now 1.3.1
+Marcus Brinkmann: I extracted header files for correct proty type
+declaration. I corrected the include statements and some other stuff as
+explicit type declarations. Doing this reduced the warnings the compiler
+gave with "-Wall" down to five. Note that the header files are maximal,
+means there are to many extern declarations. Perhaps I will fix this later.
+
+I also added a provisoric manpage scavenger.6, which gets not automagically
+installed (even with make install.man), because I don't know how to set
+section 6 with the Imakefile.
+------------------------------------------------------------------------------
+Thu May  8 18:30:19  1997
+Version is now 1.3
+I fixed it so F10 in the menu (which you get after hitting space in demo
+mode) lets you remap keys. Lots of people have had to manually change
+the $HOME/.scavenger/scavrc file as my defaults are not universal.
+------------------------------------------------------------------------------
+Tue Apr 29 17:13:10  1997
+Version is now 1.2
+I modified the x.c file as per instructions from Jan Schoenepauck
+<schoenep@uni-wuppertal.de> so that the game runs in 16/24/32 bits per pixel
+mode. It works ok (I only tried it in 8bpp and 24bpp) but there are new
+problems introduced:
+1) The animator display is completely messed up. The animator is unusable
+   in anything but 8 bit mode. Fixing this will require figuring out how
+   to fake color table stuff when there is no color table. I doubt if many
+   people use the animator anyway, so it's not a critical issue. And if
+   you really need the animator, switch to an 8 bit display.
+2) The level editor display is supposed to have a box around the selected
+   tile type. This doesn't work properly in 16/24/32 modes, it appears as
+   if none of the tiles is selected.
+
+I'm lazy so don't want to spend the time fixing these just yet.
+------------------------------------------------------------------------------
+Mon Apr 28 16:46:34  1997
+Version is now 1.1
+Thomas Haller <tha@vsnhd5.cern.ch> compiled Scavenger on an Amiga Linux
+system, and found all the keycodes are different so none of the controls
+worked. He modified his copy of the source so it would work, but this is
+only a partial fix since each different implementaion of Linux/X has
+different definitions for the keycodes. I'm copying Koules again and using
+the XLookupKeysym() function, then using the equates in the <X11/keysymdef.h>
+file, so it should work across all platforms with a recompile.
+
+If you want to upgrade to this version from an older version, you will have
+to delete the ~/.scavenger/scavrc file, or fix up the keycodes for the
+up, down, left, right, digleft and digright. Deleting the scavrc file will
+cause scavenger to create a new one. Find new heycodes in the
+<X11/keysymdef.h> file.
+------------------------------------------------------------------------------
+Fri Apr 25 20:41:50  1997
+I installed the Imakefile stuff and modified the README file. Thanks to
+Adam Jenkins <ajenkins@cs.umass.edu> for making the Imakefile!
+Adam made the vga_tetris game that uses the svgalib. It's available on
+sunsite.unc.edu in /pub/Linux/games/arcade
+------------------------------------------------------------------------------

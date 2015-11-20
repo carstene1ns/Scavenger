@@ -1,0 +1,110 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: sdlscav_vc6 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Barry\LOCALS~1\Temp\RSP30.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "c:\SDL-1.2.14\include" /D "WIN32" /D "_WINDOWS" /D "_MBCS" /Fp"Release/sdlscav_vc6.pch" /YX /Fo"Release/" /Fd"Release/" /FD /GZ /c 
+"C:\sdlscav-145\anim.c"
+"C:\sdlscav-145\edit.c"
+"C:\sdlscav-145\gfx.c"
+"C:\sdlscav-145\scav.c"
+"C:\sdlscav-145\sound.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Barry\LOCALS~1\Temp\RSP30.tmp" 
+Creating temporary file "C:\DOCUME~1\Barry\LOCALS~1\Temp\RSP31.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib sdl.lib sdlmain.lib /nologo /subsystem:windows /incremental:yes /pdb:"Release/sdlscav_vc6.pdb" /debug /machine:I386 /out:"Release/sdlscav_vc6.exe" /pdbtype:sept /libpath:"c:\sdl-1.2.14\lib" 
+".\Release\anim.obj"
+".\Release\edit.obj"
+".\Release\gfx.obj"
+".\Release\scav.obj"
+".\Release\sound.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\Barry\LOCALS~1\Temp\RSP31.tmp"
+<h3>Output Window</h3>
+Compiling...
+anim.c
+c:\sdl-1.2.14\include\sdl_config_win32.h(34) : warning C4142: benign redefinition of type
+c:\sdl-1.2.14\include\sdl_config_win32.h(37) : warning C4142: benign redefinition of type
+c:\sdl-1.2.14\include\sdl_config_win32.h(38) : warning C4142: benign redefinition of type
+c:\sdlscav-145\anim.h(13) : warning C4005: 'RGB' : macro redefinition
+        c:\program files\microsoft visual studio\vc98\include\wingdi.h(1454) : see previous definition of 'RGB'
+c:\sdlscav-145\anim.c(1149) : warning C4244: '=' : conversion from 'long ' to 'unsigned char ', possible loss of data
+c:\sdlscav-145\anim.c(1150) : warning C4244: '=' : conversion from 'long ' to 'unsigned char ', possible loss of data
+c:\sdlscav-145\anim.c(1151) : warning C4244: '=' : conversion from 'long ' to 'unsigned char ', possible loss of data
+c:\sdlscav-145\anim.c(1152) : warning C4244: '=' : conversion from 'long ' to 'unsigned char ', possible loss of data
+edit.c
+c:\sdlscav-145\anim.c(634) : warning C4761: integral size mismatch in argument; conversion supplied
+c:\sdlscav-145\anim.c(635) : warning C4761: integral size mismatch in argument; conversion supplied
+c:\sdlscav-145\anim.c(636) : warning C4761: integral size mismatch in argument; conversion supplied
+c:\sdlscav-145\anim.c(637) : warning C4761: integral size mismatch in argument; conversion supplied
+c:\sdlscav-145\anim.c(1207) : warning C4761: integral size mismatch in argument; conversion supplied
+c:\sdlscav-145\anim.c(1314) : warning C4761: integral size mismatch in argument; conversion supplied
+c:\sdlscav-145\anim.c(1320) : warning C4761: integral size mismatch in argument; conversion supplied
+c:\sdlscav-145\anim.c(1321) : warning C4761: integral size mismatch in argument; conversion supplied
+gfx.c
+scav.c
+c:\sdl-1.2.14\include\sdl_config_win32.h(34) : warning C4142: benign redefinition of type
+c:\sdl-1.2.14\include\sdl_config_win32.h(37) : warning C4142: benign redefinition of type
+c:\sdl-1.2.14\include\sdl_config_win32.h(38) : warning C4142: benign redefinition of type
+c:\sdlscav-145\anim.h(13) : warning C4005: 'RGB' : macro redefinition
+        c:\program files\microsoft visual studio\vc98\include\wingdi.h(1454) : see previous definition of 'RGB'
+c:\sdlscav-145\scav.c(11) : warning C4305: 'initializing' : truncation from 'const int ' to 'char '
+c:\sdlscav-145\scav.c(11) : warning C4305: 'initializing' : truncation from 'const int ' to 'char '
+c:\sdlscav-145\scav.c(11) : warning C4305: 'initializing' : truncation from 'const int ' to 'char '
+c:\sdlscav-145\scav.c(15) : warning C4305: 'initializing' : truncation from 'const int ' to 'char '
+c:\sdlscav-145\scav.c(16) : warning C4305: 'initializing' : truncation from 'const int ' to 'char '
+c:\sdlscav-145\scav.c(27) : warning C4305: 'initializing' : truncation from 'const int ' to 'char '
+c:\sdlscav-145\scav.c(27) : warning C4305: 'initializing' : truncation from 'const int ' to 'char '
+c:\sdlscav-145\scav.c(33) : warning C4305: 'initializing' : truncation from 'const int ' to 'char '
+c:\sdlscav-145\scav.c(40) : warning C4305: 'initializing' : truncation from 'const int ' to 'char '
+c:\sdlscav-145\scav.c(46) : warning C4305: 'initializing' : truncation from 'const int ' to 'char '
+c:\sdlscav-145\scav.c(46) : warning C4305: 'initializing' : truncation from 'const int ' to 'char '
+c:\sdlscav-145\scav.c(47) : warning C4305: 'initializing' : truncation from 'const int ' to 'char '
+c:\sdlscav-145\scav.c(47) : warning C4305: 'initializing' : truncation from 'const int ' to 'char '
+c:\sdlscav-145\scav.c(51) : warning C4305: 'initializing' : truncation from 'const int ' to 'char '
+c:\sdlscav-145\scav.c(51) : warning C4305: 'initializing' : truncation from 'const int ' to 'char '
+c:\sdlscav-145\scav.c(317) : warning C4018: '<' : signed/unsigned mismatch
+c:\sdlscav-145\scav.c(338) : warning C4018: '<' : signed/unsigned mismatch
+c:\sdlscav-145\scav.c(428) : warning C4244: '=' : conversion from 'unsigned long ' to 'char ', possible loss of data
+c:\sdlscav-145\scav.c(429) : warning C4244: '=' : conversion from 'unsigned long ' to 'char ', possible loss of data
+c:\sdlscav-145\scav.c(430) : warning C4244: '=' : conversion from 'unsigned long ' to 'char ', possible loss of data
+c:\sdlscav-145\scav.c(431) : warning C4244: '=' : conversion from 'unsigned long ' to 'char ', possible loss of data
+c:\sdlscav-145\scav.c(1094) : warning C4244: '=' : conversion from 'long ' to 'unsigned char ', possible loss of data
+c:\sdlscav-145\scav.c(1095) : warning C4244: '=' : conversion from 'long ' to 'unsigned char ', possible loss of data
+c:\sdlscav-145\scav.c(1096) : warning C4244: '=' : conversion from 'long ' to 'unsigned char ', possible loss of data
+c:\sdlscav-145\scav.c(1097) : warning C4244: '=' : conversion from 'long ' to 'unsigned char ', possible loss of data
+c:\sdlscav-145\scav.c(1115) : warning C4244: '=' : conversion from 'long ' to 'unsigned char ', possible loss of data
+c:\sdlscav-145\scav.c(1116) : warning C4244: '=' : conversion from 'long ' to 'unsigned char ', possible loss of data
+c:\sdlscav-145\scav.c(1117) : warning C4244: '=' : conversion from 'long ' to 'unsigned char ', possible loss of data
+c:\sdlscav-145\scav.c(1118) : warning C4244: '=' : conversion from 'long ' to 'unsigned char ', possible loss of data
+c:\sdlscav-145\scav.c(1698) : warning C4101: 'c' : unreferenced local variable
+c:\sdlscav-145\scav.c(2490) : warning C4146: unary minus operator applied to unsigned type, result still unsigned
+c:\sdlscav-145\scav.c(2493) : warning C4018: '<' : signed/unsigned mismatch
+c:\sdlscav-145\scav.c(2517) : warning C4146: unary minus operator applied to unsigned type, result still unsigned
+c:\sdlscav-145\scav.c(2520) : warning C4018: '<' : signed/unsigned mismatch
+sound.c
+c:\sdlscav-145\scav.c(716) : warning C4761: integral size mismatch in argument; conversion supplied
+c:\sdlscav-145\scav.c(3264) : warning C4715: 'makesound' : not all control paths return a value
+c:\sdl-1.2.14\include\sdl_config_win32.h(34) : warning C4142: benign redefinition of type
+c:\sdl-1.2.14\include\sdl_config_win32.h(37) : warning C4142: benign redefinition of type
+c:\sdl-1.2.14\include\sdl_config_win32.h(38) : warning C4142: benign redefinition of type
+c:\sdlscav-145\anim.h(13) : warning C4005: 'RGB' : macro redefinition
+        c:\program files\microsoft visual studio\vc98\include\wingdi.h(1454) : see previous definition of 'RGB'
+c:\sdlscav-145\sound.c(32) : warning C4101: 'i' : unreferenced local variable
+c:\sdlscav-145\sound.c(88) : warning C4018: '>' : signed/unsigned mismatch
+Linking...
+MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib "msvcrt.lib" conflicts with use of other libs; use /NODEFAULTLIB:library
+
+
+
+<h3>Results</h3>
+sdlscav_vc6.exe - 0 error(s), 63 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,186 @@
+# Microsoft Developer Studio Generated Dependency File, included by sdlscav_vc6.mak
+
+..\..\anim.c : \
+	"..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"..\..\..\sdl-1.2.14\include\begin_code.h"\
+	"..\..\..\sdl-1.2.14\include\close_code.h"\
+	"..\..\..\sdl-1.2.14\include\sdl.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_active.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_audio.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_cdrom.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_config.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_config_win32.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_cpuinfo.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_endian.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_error.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_events.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_joystick.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_keyboard.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_keysym.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_loadso.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_main.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_mouse.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_mutex.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_platform.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_quit.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_rwops.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_stdinc.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_thread.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_timer.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_version.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_video.h"\
+	"..\..\anim.h"\
+	"..\..\edit.h"\
+	"..\..\gfx.h"\
+	"..\..\names.h"\
+	"..\..\scav.h"\
+	"..\..\sound.h"\
+	
+
+..\..\edit.c : \
+	"..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"..\..\..\sdl-1.2.14\include\begin_code.h"\
+	"..\..\..\sdl-1.2.14\include\close_code.h"\
+	"..\..\..\sdl-1.2.14\include\sdl.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_active.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_audio.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_cdrom.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_config.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_config_win32.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_cpuinfo.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_endian.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_error.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_events.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_joystick.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_keyboard.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_keysym.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_loadso.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_main.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_mouse.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_mutex.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_platform.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_quit.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_rwops.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_stdinc.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_thread.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_timer.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_version.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_video.h"\
+	"..\..\anim.h"\
+	"..\..\edit.h"\
+	"..\..\gfx.h"\
+	"..\..\names.h"\
+	"..\..\scav.h"\
+	"..\..\sound.h"\
+	
+
+..\..\gfx.c : \
+	"..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"..\..\..\sdl-1.2.14\include\begin_code.h"\
+	"..\..\..\sdl-1.2.14\include\close_code.h"\
+	"..\..\..\sdl-1.2.14\include\sdl.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_active.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_audio.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_cdrom.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_config.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_config_win32.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_cpuinfo.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_endian.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_error.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_events.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_joystick.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_keyboard.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_keysym.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_loadso.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_main.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_mouse.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_mutex.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_platform.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_quit.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_rwops.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_stdinc.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_thread.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_timer.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_version.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_video.h"\
+	"..\..\anim.h"\
+	"..\..\edit.h"\
+	"..\..\gfx.h"\
+	"..\..\names.h"\
+	"..\..\scav.h"\
+	"..\..\sound.h"\
+	
+
+..\..\scav.c : \
+	"..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"..\..\..\sdl-1.2.14\include\begin_code.h"\
+	"..\..\..\sdl-1.2.14\include\close_code.h"\
+	"..\..\..\sdl-1.2.14\include\sdl.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_active.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_audio.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_cdrom.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_config.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_config_win32.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_cpuinfo.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_endian.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_error.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_events.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_joystick.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_keyboard.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_keysym.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_loadso.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_main.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_mouse.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_mutex.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_platform.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_quit.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_rwops.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_stdinc.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_thread.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_timer.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_version.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_video.h"\
+	"..\..\anim.h"\
+	"..\..\edit.h"\
+	"..\..\gfx.h"\
+	"..\..\names.h"\
+	"..\..\scav.h"\
+	"..\..\sound.h"\
+	
+
+..\..\sound.c : \
+	"..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	"..\..\..\sdl-1.2.14\include\begin_code.h"\
+	"..\..\..\sdl-1.2.14\include\close_code.h"\
+	"..\..\..\sdl-1.2.14\include\sdl.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_active.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_audio.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_cdrom.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_config.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_config_win32.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_cpuinfo.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_endian.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_error.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_events.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_joystick.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_keyboard.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_keysym.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_loadso.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_main.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_mouse.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_mutex.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_platform.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_quit.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_rwops.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_stdinc.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_thread.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_timer.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_version.h"\
+	"..\..\..\sdl-1.2.14\include\sdl_video.h"\
+	"..\..\anim.h"\
+	"..\..\edit.h"\
+	"..\..\gfx.h"\
+	"..\..\names.h"\
+	"..\..\scav.h"\
+	"..\..\sound.h"\
+	

@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Scavenger-win32", "sdlscav-win32.vcproj", "{60C32827-4C34-4D6A-94BF-3C0FF1FF298E}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Scavenger-install", "sdlscav-win32-install.vdproj", "{2B43F726-7A25-45AB-9D13-BDD8CC28BBE5}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{60C32827-4C34-4D6A-94BF-3C0FF1FF298E}.Debug.ActiveCfg = Debug|Win32
+		{60C32827-4C34-4D6A-94BF-3C0FF1FF298E}.Debug.Build.0 = Debug|Win32
+		{60C32827-4C34-4D6A-94BF-3C0FF1FF298E}.Release.ActiveCfg = Release|Win32
+		{60C32827-4C34-4D6A-94BF-3C0FF1FF298E}.Release.Build.0 = Release|Win32
+		{2B43F726-7A25-45AB-9D13-BDD8CC28BBE5}.Debug.ActiveCfg = Debug
+		{2B43F726-7A25-45AB-9D13-BDD8CC28BBE5}.Debug.Build.0 = Debug
+		{2B43F726-7A25-45AB-9D13-BDD8CC28BBE5}.Release.ActiveCfg = Release
+		{2B43F726-7A25-45AB-9D13-BDD8CC28BBE5}.Release.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionItems) = postSolution
+		README.txt = README.txt
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

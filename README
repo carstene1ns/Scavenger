@@ -1,0 +1,157 @@
+Scavenger and this README file were written by David Ashley. dash@xdr.com
+SDL version enhancements were contributed by Barry Mead barrymead@cox.net
+
+You can download this game at http://sourceforge.net/projects/sdlscavenger
+
+---  COMPILING AND INSTALLATION  --------------------------------------------
+LINUX:
+
+Verify that you have installed the libSDL, SDL-image, SDL-gfx, and 
+SDL-sound libraries.  Some linux distributions require you to install the
+SDL-gfx-devel, SDL-image-devel and SDL-sound-devel libraries as well.
+
+Untar the sdlscav-145.tgz (your version may vary)  file in your home directory.
+cd ~
+tar -xzf sdlscav-145.tgz
+change to the new directory created by the untar.
+cd sdlscav-145
+make
+su root
+make install
+exit
+
+Be sure that your have /usr/local/bin in your PATH environment variable.
+type: echo $PATH
+to verify.
+
+Run the program by typing: sdlscav
+
+If you run SDL Scavenger with the -h or --help option it will display a help
+page describing how to use the other command line options. (i.e.)
+
+sdlscav --help
+
+WINDOWS:
+
+Download the latest SDL libraries for windows from:
+http://www.libsdl.org/download-1.2.php
+
+The file you want is "SDL-devel-1.2.14-VC6.zip" (Assuming you are using the
+Microsoft Visual C++ version 5,6, or 7).
+
+Using a DOS terminal window, change to the root directory and unzip the
+SDL-devel-1.2.14-VC6.zip file there.  If you use a program like winzip,
+be sure that you select the root directory "C:\" as the location where
+you want the files to be unzipped.  The SDL library should end up in the
+C:\SDL-1.2.14\  directory, and the scavenger files should end up in the
+C:\sdlscav-145\ directory.
+
+cd c:\
+unzip SDL-devel-1.2.14-VC6.zip
+cd c:\
+unzip sdlscav-145.zip
+copy c:\SDL-1.2.14/lib/SDL.dll c:\sdlscav-145
+
+Download "MSVCRTD.DLL" and put it in the c:\windows\system32\ directory.
+This is the runtime library for Microsoft Visual C++ which is required
+to run all programs compiled with the Microsoft compiler.  You can find
+it several places on the internet.  Use google.com to find a download
+site.
+
+If you don't have VisualC++ just run the sdlscav.exe
+provided in the zip file.
+
+If you wish to compile your own and make changes, then use
+the following instructions for recompiling from source.
+
+Using the "windows explorer" (file manager) select a directory
+for Visual C++ 7.0, select the directory 
+c:\sdlscav-145\windows
+or for Visual C++ 6.0, select the directory
+c:\sdlscav-145\windows\sdlscav_vc6
+
+There you will find the project file for your type of compiler.
+Double click on the project file and the IDE will open.
+
+Click on the "File View" tab of the workspace window.
+Then Right Click on the "sdlscav_vc6 files" item
+and left click on build
+
+For Visual C++ 7.0 the item will be labeled sdlscav.
+For Visual C++ 6.0 the item will be labeled sdlscav_vc6.
+
+After the compiler is done, close the IDE window.
+
+Now using the "windows explorer" (file manager) copy the
+sdlscav.exe or sdlscav_vc6.exe from the directory it was
+compiled in to the c:\sdlscav-145 directory and make sure
+it is named sdlscav.exe .
+
+Also copy the c:\SDL-1.2.14\lib\SDL.dll file to the 
+c:\sdlscav-145 directory.
+
+Now you can run sdlscav.exe from the "windows explorer" by 
+double clicking on its file name.
+
+You may also create a shortcut to this file for your desktop
+using the icon in c:\sdlscav-145\data\scav.bmp
+
+---  COPYING  ---------------------------------------------------------------
+
+This program is released under the GPL license.  See the file COPYIING
+for full details of the GPL License.
+
+
+---  DISCLAIMER  ------------------------------------------------------------
+
+USE THIS AT YOUR OWN RISK!!!! Authors are not responsible for any damage this
+software may cause.
+
+
+---  GAME PLAY  -------------------------------------------------------------
+
+Scavenger is like Lode Runner. You've got to run around gathering objects
+while avoiding enemies. You can dig down through some of the blocks to get
+at buried objects. After you've collected everything, ladders may appear.
+To finish the level you've got to exit through the top of the screen. If
+an enemy falls into a dug brick, he is stunned for a while. If the brick
+fills in with him in it, he is killed, and he will reappear at the top of
+the screen.
+
+This version has a level editor for designing your own levels, and a
+graphics editor for drawing your own artwork.
+
+---  GAME CONTROLS  ---------------------------------------------------------
+
+The default control is with the arrow keys and the left Ctrl and Alt
+buttons as shown below.
+
+Up arrow:    Move player up
+Down arrow:  Move player down
+Left arrow:  Move player left
+Right arrow: Move player right
+Left Ctrl:   Dig to the left
+Left Alt:    Dig to the right
+
+As of version 1.3 you can remap the movement and digging keys. From the main
+menu press the F10 key, then press the key you want to define for each
+described control function.  During the key remapping process if you press
+the Escape key the old key definitions remain unchanged.
+
+Here are some other useful keys to remember.
+
+Keypad Plus     Skip to next level (Works in demo or play modes)
+Keypad Minus    Skip to previous level (Works in demo or play modes)
+k               Kill the player (useful if he's trapped)
+L-Shift         Auxiliary Kill key (faster to find blind)
+Escape          Toggle between demo and play modes
+Space           Go to the main menu (only in demo mode)
+Pause           Pauses the game (press Pause again to Unpause)
+Alt X           Exit the game
+
+See the file DOC for more details about scavenger.
+See the file STRATEGY to learn how to get the highest scores.
+
+-----------------------   CHANGELOG    ------------------------------
+See the changelog file for a history of scavenger.
+---------------------------------------------------------------------

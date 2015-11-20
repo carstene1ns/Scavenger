@@ -1,0 +1,435 @@
+The following new features were added by Barry Mead
+<barrymead@cox.net>, Frank Zago, and  Marc Le Douarain
+<marc.le-douarain@laposte.net>.
+
+Feature #1 (two handed coordinated play)
+   
+To allow for more coordinated two handed play, the
+default controls were changed to Arrow Keys for movement,
+and Left-Ctrl for Dig Left, and Left-Alt for Dig Right.
+
+Feature #2 (fast editor level selection)
+
+For fast level selection in the editor simply press
+the numeric keypad numbers for the desired level, then
+press the Enter key on the numeric keypad to load that
+level.  Each digit multiplies the previous digits by 10 
+unless a number greater than 400 is made then it resets
+the level number to one.
+
+I also increased the maximum number of levels that
+can exist to 400 from 256 without affecting the
+compatibility of existing level or movie files.
+
+Level selection can also be achieved by using the
+left and right arrow keys to increase or decrease
+the level number by 1, or the up and down arrow
+keys to increase or decrease the level number by 10.
+Or use the PageUp or PageDown keys to increase or
+decrease the level number by 100.
+
+Feature #3 (More logical keystroke edit object selection)
+
+Instead of `1234567890- to select the edit object
+I changed it to F1 thru F12.  All modern keyboards
+have 12 function keys nowadays, and there are exactly
+12 edit objects so this works out very nicely.
+
+Feature #4 (Overwrite movie option at level completion)
+
+While playing the game I often wished that I could make
+the last level I just played into the movie, even though
+it didn't have a higher score.  I played better, or with
+fewer mistakes, or did some really cool maneuvers or whatever.
+To accommodate this desire I added a feature. Just press the
+F12 key at the score total screen to replace the current movie
+with your last game.
+
+Feature #5 (Toggle demo/play mode)
+
+Movie demo/play mode toggle.  I added a feature to the game
+in which you can toggle between demo mode and play mode by
+pressing the Escape key.  Before you could only go one-way
+from play mode to demo mode.  Now you can go back to play
+mode by pressing the Escape key again.
+
+Feature #6 (Fast game play level select)
+   
+Changing levels used to take a long time.  You would
+have to press the next level key many times to get
+there.  Now it is fast and easy.
+
+Press F3, type the level number (using the number keys
+at the top of the keyboard, or on the numeric keypad),
+and press Escape.
+
+Feature #7 (Faster less noisy controls)
+
+Improved the operation of the F8/KP+, F7/KP-, and
+K keys.  When you use the F7/KP- or F8/KP+ keys to
+rapidly scan though levels it wastes time to listen
+to the victory sound repeatedly.  So now the victory
+sound only plays when you actually complete a level.
+
+The same is true for The kill K key.  It is often
+desireable hit the K key several times to obtain a
+preferred flashing object configuration.  This is
+especially true when striving for an optimal
+completion time or faster movie.  So now the death
+sound only plays when you actually die.
+
+Feature #8 (More complete score keeping)
+
+The score page now displays the
+status of Hidden Monsters, and Flashing objects.
+Also the score page displays the Best Score, and
+playing time for this level, so you can see how
+well you did against the best score/time so far.
+
+Feature #9 (Support for special levels)
+
+The distributed levels.scl comes with
+several levels that don't have exactly
+3 flashing objects, or exactly 3 hidden
+monsters. (154 POP MAN for instance)
+  
+I added an override key that allows you to
+save a level with less than 3 flashing objects or
+hidden monsters as long as the number is in the
+legal range of 0 to 3.  The default Override
+key is the Right Alt plus the W key.  Pressing
+the W key by itself maintins the normal restrictions
+on saving with exactly 0 or 3 flashing objects/hidden
+monsters.
+
+Feature #10 (Less edit level number confusion)
+
+It used to be possible to think you were editing
+one level, but actually be editing a different one.
+I minimized this confusion.  You can still shift
+levels from one number to another by using the arrow
+keys or number keys to change the level
+number before saving if that is your intention, but
+it is not as likely that a level will accidently be
+saved on top of the wrong level number.
+
+I also made the F2 & F3 keys work consistently from
+menu, demo, or play modes. In the editor mode, the
+function keys are used for edit object selection.
+
+Feature #11 (made a nice color icon for scavenger)
+
+The file is named scav.xpm, or scav.bmp for windows
+users.
+
+Feature #12 (Animator key help)
+
+I added a full keystroke legend/menu to the
+animator. Making the animator much easier
+for the uninitiated to use.  Adding this feature
+also made it necessary to include colorized
+text capability to the internal Text functions.
+
+Feature #13 (New levels.scl file)
+I generated a new clean master minimum
+size "levels.scl" file with levels only
+(no movies).  This version is exactly the
+same as the original levels.scl except for
+the addition of hidden monsters to all of
+the levels that could have had them but
+didn't.  The hidden monsters are located
+in places that do not interfere with
+operation of the level.  The play
+difficulty was NOT made any easier on the
+levels.  The original challenge and fun
+are completely preserved.
+
+Feature #14 (64-bit Alhlon ready)
+I coordinated with Frank Zago and he
+he compiled the source code on his new
+Athlon-64 system.  I integrated the
+changes necessary for the code to 
+compile on the newer 64-bit versions
+of the gcc compiler. Thanks to Frank.
+Frank also provided me with invaluable
+wonderful suggestions to improve the
+game.  Many Thanks Frank!
+
+The code now compiles with the -Wall
+(warn all) option on, meaning all of
+the code now has full ANSI compliant
+declarations and function prototypes.
+
+Feature #15 (New Fonts!)
+I improved the the shape of the character
+fonts and added the following extra
+characters to font definitions:
++#()
+
+Feature #16 (Smarter Mouse Cursor)
+I added automatic mouse cursor on/off
+to the various modes in scavenger.
+The mouse cursor is just a distraction
+in play and demo modes, so it is now
+automatically turned off during these
+modes.  It reappears in the edit or
+animate modes as needed.
+
+Feature #17 (Centered all menus)
+I improved the appearance of the remap
+keys and rename player menus.  They
+now appear in the center of the screen
+like the main menu.
+
+Feature #18 (Command line options)
+I added command line option processing
+to scavenger.  Using command line options,
+you can now use alternative configuration
+files to give scavenger a new look or new
+animation characters.  You can also make
+scavenger run in a window, or select the
+start level from the command line.  If you
+can't seem to get past a certain level
+there is a "stuck" option to help you.
+For more information on command line options
+type:
+
+sdlscav --help
+
+Feature #19 (Updated Animations)
+I updated the microman.lbm, and reddevil.lbm
+files to complete the missing animation
+sequences. I updated the fonts in the
+brownblue.lbm, and highstreet.lbm files to match
+the improved fonts in the redbrick.lbm file also.
+
+Feature #20 (Better Makefile)
+I updated the make file for SDL Scavenger
+to add an install target.  Now the usual
+linux make procedure applies.
+
+make
+su root
+make install
+exit
+
+The executable is installed in:
+
+/usr/local/bin
+
+and the data files are installed in:
+
+/usr/local/games/scavenger
+
+so the game will be operable to all users
+on a multi user linux system.
+
+Feature #21 (in-game progress indicators)
+I added in-game indicators to help the player
+remember if he got the Flashing-Object first,
+or the Hidden-Monster.  I have often played
+a level over and over and since the location
+of the Flashing-Object and Hidden-Monster
+change at random, It is easy to forget if
+you already captured these items.
+
+Now with the in-game progress indicators
+you will never forget.
+
+Feature #22 (Shamrock Artwork)
+If you would prefer to see a leprechaun
+running around on the screen instead of
+the regular red guy, type this command:
+sdlscav -c shamrc
+
+These commands will also bring up different
+artwork:
+sdlscav -c reddevilrc
+sdlscav -c micromanrc
+sdlscav -c highrc
+
+Have fun with these and then make your
+own artwork!  It is easy.  Just press
+F2 from the main menu to enter the
+animator.
+
+Feature #23 (Screen Saver Disable Script)
+I added a script file (linux use only) that
+turns off the screen saver before running scavenger
+and turns it back on after scavenger exits.
+To use it just execute the command scavsaver instead
+of sdlscav.  The command line parameters work the same
+and are passed on into sdlscav unaffected.
+
+Feature #24 (Windows Command Line Parser)
+I added a crude command line parser for windows.  This
+one is not as nice as getopt, but it works pretty well
+for a windows command line parser.  It can only handle
+one command line option at a time.  The options include
+-w (run in a window)
+-s (show master solutions movie file {Hall of Fame} )
+-s 55 (show solution starting at level 55)
+-l 55 (go to level 55 when the F4 key is pressed)
+-c configfile (use alternate config file for scavenger)
+The config file must be in the c:\sdlscav-145\scav\ directory!
+For example copy all of the config files from the data directory
+to the scav directory like this:
+cd c:\sdlscav-145\data
+copy *rc ..\scav
+cd ..
+sdlscav -c shamrc
+This will run scavenger with the Shamrock/Leprechaun artwork.
+
+Feature #25 (High Score tie breaker with playing time)
+On difficult levels where the time bonus always expires it is
+common to exactly tie the high score.  Now if you tie the
+score on those levels, and do it in less time, your
+name is automatically added to the hall-of-fame, and your
+game becomes the new demo movie for that level.  This feature
+was added in a way that preserves backward compatibility
+with all of the old levels and demo movies.
+
+Feature #26 (Real time scoring with bonus, and penalty indicators)
+This feature makes learning the strategy of the game more apparent.
+As you play the game, indicators pop up in the lower right hand
+corner telling you if you got a penalty or a bonus, and the
+displayed score is always exactly what you have earned.
+I also added a text file named STRATEGY which explains how to play
+sdlscavenger to attain the highest point scores.  NOTE: Scorekeeping
+behaves exactly as it did before preserving backward compatibility
+with existing save games, but now the accurate real-time scorekeeping
+helps you to see the subtle nuances of strategies that help you attain the
+highest score.
+
+Feature #27 (Ladder Progress Indicator)
+On some levels where the ladder to the top of the screen is present
+from the beginning, it is possible to be confused as to when the
+last object has been obtained.  This is especially true when an
+enemy picks one up.  Sometimes you just don't know if it is
+time to head for the exit at the top of the screen.  For these levels, I
+added a ladder progress indicator that clearly tells you when
+it is safe to proceed to the exit at the top of the screen.
+
+Feature #28 (Auxiliary Kill Key)
+I found that when trying over and over to get a better score
+on a given level that taking my eyes off of the screen to find
+the K "Kill" key became annoying.  So I added an auxiliary Kill key
+in play mode.  I picked the Left Shift key, because it is quick
+to access from the left hand without looking.  In this release
+I also improved the demos for the first 50-levels in the masters.scl
+file.  Now they are a lot harder to beat than they were before.
+I also reviewed and updated the documentation.
+
+Feature #29 (Fractional second Hall of Fame winner)
+Now if you get the same score as the demo in the hall of fame, but
+do it in slightly less time (even a fraction of a second less)
+your demo replaces the one in the hall-of-fame.  I added this
+feature since it is often very hard to beat a given play time
+by a whole second.  Now if you work hard to get a better play
+time you get rewarded by having your new game in the hall-of-fame
+even if you only beat the previous record by as little as 1/60th
+of a game second.
+
+(Disclaimers on Seconds and Fractions of a second)
+In scavenger (since the beginning) the time unit closest to a
+second has always been 1.2 real seconds.  Since it was always
+that way and the historical demos were recorded that way, I cannot
+make the second any more precise now, or I would destroy downward
+compatibility with prerecorded historical demo files.
+Just so you know (I don't want any bug reports telling me that
+seconds are actually 1.2 seconds long).
+Fractional seconds.  The program uses a 20-millisecond timer-tick
+interrupt to normalize the primary game loop at exactly 50 loops
+per second.  The game loop counter is set to 60 loops per second, so
+that makes each game second exactly 1.2 seconds in real time.
+On the new scorekeeping screen you will see best times and play times
+displayed in 1234.12 format  The two digit number after the decimal
+point is actually not 100ths of a second, but 60ths of a second.
+You will not see any values above .59  But since it is informative
+and accurate I displayed it to make it obvious why one play time is
+better than another.
+
+Feature #30 Hall-of-Fame time shown in fractions of a second.
+I Changed the display of the "best-time" on the play screen to include
+fractional seconds.  This gives the player a better Idea of how fast he/she
+must play to beat the time in the hall-of-fame demo movie.
+In this release I also improved the play time or score on the first 100 levels,
+within the masters.scl file, to make it even more meaningful if you enter the
+"Hall-of-Fame" Enjoy! (Play with -s option to see "Hall of Fame" levels/times)
+
+Feature #31 Level Editor numeric level selection now works with the number
+keys at the top of the keyboard in addition to the num-pad.  Both Enter Keys
+now work for loading the selected level after numeric key entry.
+
+Feature #32 Level Editor now saves levels numbering 201 to 400.  This was a
+simple bug.  It was always supposed to save levels numbering 201 to 400,
+but there was a bug in one of the constants used to check the maximum level
+ number being saved.
+
+Feature #33 Demo Touch-up  This feature lets you watch a demo part way thru,
+then switch to play mode and retouch the demo from that point on.  Just
+watch the demo until it reaches the point where you would like to improve
+the demo, then press the F12 key to switch to play mode.  As soon as you
+touch the first action key the play will resume from that point on and you
+will be recording a new demo.  If you get a better score or time, then the
+retouched demo will become the new saved demo.  If you didn't get the high
+score or a better time, and you still want the retouched play to become the
+new demo, you can use Feature #4 to save the last play as the new demo, by
+pressing the F12 key again in the Score Keeping screen.
+
+Feature #34 No Sound Command Line Option  This feature disables sound if
+your computer is having trouble with sound.  Use --quiet or -q to disable
+sound.
+
+Feature #35 Marc Le Douarain generously contributed the following
+features to the game.  (http://membres.lycos.fr/mavati) 
+
+* 'p' key added to pause the game (only 'pause' key before)
+* Added joystick support to control main character movement & digging.
+* Added game version number at top of the main menu screen.
+* Added a little delay in the main game loop to reduce CPU usage.
+* Added fullscreen/window toggle option to the main menu.
+* Added close window to quit feature (not for fullscreen mode).
+
+Feature #36 Added additional progress indicators in the lower left hand
+corner of the screen which indicate weather trapping or killing penalties
+have occurred while playing the current level.
+
+Feature #37 Rewrote the sound drivers to use standard SDL libraries.
+Now the sounds play properly in distributions after ETCH (after pulse
+audio was added).  Also recompiled the windows exe file for these changes.
+I updated the sound files to add the proper header information to make
+them into more standard .wav files, which are supported by standard SDL
+library sound functions. The previous .raw format was not supported by
+standard library conversion functions, and required complex specialized
+non-standard sound conversion routines.  These conversion routines were
+where the pulse-audio incompatibility was located, so by eliminating the
+need for the non-standard specialized conversion of audio, future
+compatiblity is improved. 
+
+Feature #38 Improved the artwork for the leprechaun, and the regular guy.
+For the leprechaun, I gave him a happier face, and more consistant head
+shape.  Also made the same improvements to the microman artwork at the same
+time.  For the regular guy artwork, I added a consistent opaque black border
+to make his outline more crisp as he walks in front of ladders and berries.
+This had already been done for the move left and right animations, but not for
+the other actions.  I added the black border to all movement animations for
+crisp outline consistency.
+
+Feature #39 Improved the high scores in the masters.scl file and cleaned-up
+the font for the letter "R".  This font change was applied to all of the
+included artwork sets.  Added a few more tips to the "STRATEGY" file to help
+players to achieve the highest possible scores.
+
+Feature #40 Disabled the pause function of the P key during player name
+entry.  If the player name had a letter P in the name this was causing
+the game to apparently lock up because it was paused.  Also fixed the
+player name status display during the transition from demo mode to play
+mode when the F12 key is pressed to "touch-up" a demo.  Also improved the
+Fonts for the letters "V and W".  Utilized demo-retouch to improve the
+high scores or play times for the remaining levels in the game.
+
+Feature #41 Fixed all of the "FIX-ME" places in where copyup() should be
+replaced by copyupxysize() which speeds up the overall game loop and
+removes flicker.  Also added "SAFE TO EXIT" status message when all objects
+are collected.
